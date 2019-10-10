@@ -2,7 +2,6 @@ language: python
 python:
   - "3.6"
 install:
-  - source myvenv/bin/activate
   - pip install Django
   - python3 manage.py migrate
 script:
