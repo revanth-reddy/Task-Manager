@@ -1,9 +1,9 @@
-language: python # => 1
-    python: # => 2
-      - "3.6"
-    env: # => 4
-      -DJANGO=2.1
-    install: # => 5
-      - pip3 install -r requirements.txt
-    script: # => 7
-      - python manage.py test
+language: python
+python:
+  - "3.6"
+install:
+  - source myvenv/bin/activate
+  - pip install -r requirements.txt
+  - python manage.py migrate
+script:
+  - python manage.py test
