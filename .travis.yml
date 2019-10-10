@@ -3,7 +3,7 @@ python:
   - "3.6"
 install:
   - source myvenv/bin/activate
-  - pip install -r requirements.txt
+  - pip3 install Django
   - python3 manage.py migrate
 script:
   - python3 manage.py test
